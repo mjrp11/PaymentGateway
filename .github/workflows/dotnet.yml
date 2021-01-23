@@ -21,6 +21,6 @@ jobs:
     - name: Build
       run: dotnet build src --no-restore
     - name: Unit Test
-      run: dotnet test .\src\PaymentGateway.UnitTests\PaymentGateway.UnitTests.csproj --no-build --verbosity normal
+      run: dotnet test src/PaymentGateway.UnitTests/PaymentGateway.UnitTests.csproj --no-build --verbosity normal
     - name: Integration Test
-      run: dotnet test .\src\PaymentGateway.IntegrationTests\PaymentGateway.IntegrationTests.csproj --no-build --verbosity normal
+      run: dotnet test src/PaymentGateway.IntegrationTests/PaymentGateway.IntegrationTests.csproj --no-build --verbosity normal
