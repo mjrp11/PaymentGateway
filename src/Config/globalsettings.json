@@ -1,0 +1,14 @@
+{
+  "Database": {
+    "Type": "SqlServer|SqlLite",
+    "SqlServer": {
+      "ConnectionString": "abc"
+    },
+    "Sqlite": {
+      "FilePath": "<Path>\\PaymentGateway.sqlite"
+    }
+  },
+  "Encryption": {
+    "Key": "SomeKey"
+  }
+}
