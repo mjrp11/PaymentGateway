@@ -1,0 +1,87 @@
+{
+  "version": 6,
+  "entities": [
+    {
+      "entity": {
+        "type": "Project",
+        "id": "9e5305c1-e92f-47f2-9268-94e4afdc4f23",
+        "name": "PaymentGateway"
+      },
+      "children": [
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n  \"A\": 5\n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "scheme": {
+                "name": "http",
+                "version": "V11"
+              },
+              "host": "localhost:2345",
+              "path": "/PaymentGateway/6281BD6B-BC55-4656-9312-CB17DA17A1D7"
+            },
+            "id": "7f2d5d9f-675a-41b9-be4a-58f0359626a0",
+            "name": "Get",
+            "headers": []
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n  \"CardNumber\": \"4111111111111111\",\n  \"ExpireDateYear\": 2021,\n  \"ExpireDateMonth\": 10,\n  \"CVV\": \"123\",\n  \"Amount\": 10.23,\n  \"Currency\": \"EUR\"\n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "scheme": {
+                "name": "http",
+                "version": "V11"
+              },
+              "host": "localhost:2345",
+              "path": "/PaymentGateway"
+            },
+            "id": "9255bf2a-8ab1-4ac6-9d09-c6fe04f1d271",
+            "name": "Process",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
