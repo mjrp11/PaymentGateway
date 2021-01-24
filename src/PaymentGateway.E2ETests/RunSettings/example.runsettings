@@ -1,0 +1,5 @@
+﻿<RunSettings>
+    <TestRunParameters>
+        <Parameter name="PaymentGatewayBaseUrl" value="http://localhost:2345/" />
+    </TestRunParameters>
+</RunSettings>

@@ -2,5 +2,7 @@
 
 bin
 obj
-/src/Config/globalsettings.*.json
-/src/PaymentGateway.Api/appsettings.*.json
+globalsettings.*.json
+appsettings.*.json
+*.runsettings
+!/src/PaymentGateway.E2ETests/RunSettings/example.runsettings
