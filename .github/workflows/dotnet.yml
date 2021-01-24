@@ -1,0 +1,26 @@
+name: .NET
+
+on:
+  push:
+    branches: 
+      - '*'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.x
+    - name: Restore dependencies
+      run: dotnet restore src
+    - name: Build
+      run: dotnet build src --no-restore
+    - name: Unit Test
+      run: dotnet test src/PaymentGateway.UnitTests/PaymentGateway.UnitTests.csproj --no-build --verbosity normal
+    - name: Integration Test
+      run: dotnet test src/PaymentGateway.IntegrationTests/PaymentGateway.IntegrationTests.csproj --no-build --verbosity normal
