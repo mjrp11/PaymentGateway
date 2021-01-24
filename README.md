@@ -80,6 +80,7 @@ Are all different. There should be way to update card information to ensure that
   - The file [RunningOnDocker.ps1](RunningOnDocker.ps1) can be used to run the application on docker. Its recommend to either change the globalsettings configuration file directly or create a new one called *"globalsettings.docker.json*". This file will publish the API project, build the docker image, and run the image exposing the port 2345. (You can use host.docker.internal if you need to reference your localhost inside the application, for instance for the connection string of the sql server).
 - **API client:**
   - The file [PaymentGateway.json](PaymentGateway.json) was exported from the tool [Talend API Tester on chrome.](https://chrome.google.com/webstore/detail/talend-api-tester-free-ed/aejoelaoggembcahagimdiliamlcdmfm?hl=en) You Should also be able to import it into Postman.
+  - After starting the api you can also call "\<url\>/swagger/index.html" to see the swagger UI.
 - **Build script / CI:**
   - On the github repository you can check the CI pipeline on the tab *"Actions*". The CI pipeline restores the packages, builds the application and runs the unit and integration tests (it does not run the End-to-End tests because they need a deployed application).
   - In order to convert this from a CI to a CD pipeline we could use 2 options:
