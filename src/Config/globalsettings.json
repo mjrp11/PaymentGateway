@@ -5,10 +5,11 @@
       "ConnectionString": "abc"
     },
     "Sqlite": {
-      "FilePath": "<Path>\\PaymentGateway.sqlite"
+      "ConnectionString": "<Path>\\PaymentGateway.sqlite"
     }
   },
   "Encryption": {
-    "Key": "SomeKey"
+    "Key": "SomeKey",
+    "SSM_Path": "/PaymentGateway/EncryptionKey"
   }
 }
